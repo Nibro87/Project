@@ -3,6 +3,7 @@ int a=1;
 int b=2;
 String x = "Hello";
 String y = "World!";
+
 void setup() {
    if (iAmHappy())
    {
@@ -13,6 +14,8 @@ void setup() {
      println("I don't clap my hands"); 
    }
 sum(200,350 );
+CAPS("abc");
+println (CAPS("abc"));
 }
 
 
@@ -39,3 +42,15 @@ x= x.toUpperCase();
 y = y.toUpperCase();
 println(x+y);
 }
+
+boolean CAPS(String ZZ){
+  char O = ZZ.charAt(0);   
+  if (Character.isUpperCase(O))   {   
+  return true;   
+}   
+  return false; 
+
+}
+  
+  
+  
