@@ -1,17 +1,32 @@
+
 import java.util.ArrayList;
+import java.util.List;
 
 public class Garage {
 
-    public void Garage(){
+    List<Car> myGarage;
+    String name;
 
-        ArrayList<String> car = new ArrayList<>();
-        car.add("electricVehicle");
-        car.add("fuelVehicle");
-        car.add("dieselVehicle");
-        System.out.println(car);
+    public Garage(String name){
+      this.myGarage = new ArrayList<>();
+      this.name = name;
     }
 
-    void beregnGrønAfgiftForBilpark(){
+    public void addCar(Car a){
+        myGarage.add(a);
+
+    }
+
+    @Override
+    public String toString() {
+        return "My Garage:\n\n" + myGarage;
+    }
+    public double beregnGrønAfgiftForBilpark() {
+        double totalAfgift = 0;
+        for (Car b : myGarage) {
+            totalAfgift += b.beregnGrønEjerafgift();
+        }
+        return totalAfgift;
 
     }
 }

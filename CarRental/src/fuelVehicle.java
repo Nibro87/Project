@@ -3,7 +3,7 @@ public class fuelVehicle extends Car  {
     public float oktantal;
     public float kmPrl;
 
-public fuelVehicle(String regNr, String brand, String model, String year, float numDoors) {
+public fuelVehicle(String regNr, String brand, String model, int year, float numDoors) {
 super(regNr, brand, model, year, numDoors);
 this.oktantal = oktantal;
 this.kmPrl = kmPrl;
@@ -28,21 +28,22 @@ this.kmPrl = kmPrl;
     @Override
     public String toString() {
 
+        return "fuelVehicle\n" +
+                "RegNr = " + regNr +
+                "\nbrand = " + brand +
+                "\nModel = " + model +
+                "\nyear = " + year +
+                "\nnumDoors = " + numDoors +
+                "\nOktantal = " + oktantal +
+                "\nKm Per Liter = " + kmPrl;
 
-        return "fuelVechicle{" +
-                "regNr=" + regNr +
-                ", brand=" + brand +
-                ", model=" + model +
-                ", year=" + year +
-                ", numDoors=" + numDoors +
-                ", oktantal=" + oktantal +
-                ", kmPrL=" + kmPrl +
-                '}';
+
     }
 
 
     @Override
-    public double beregnGrønEjerafgift() {
+    public double beregnGrønEjerafgift()
+    {
 
         if ( kmPrl < 5)
         {

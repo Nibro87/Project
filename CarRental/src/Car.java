@@ -2,10 +2,10 @@ public abstract class Car {
 String regNr;
 String brand;
 String model;
-String year;
+int year;
 float numDoors;
 
-public Car(String regNr, String brand, String model, String year, float numDoors){
+public Car(String regNr, String brand, String model, int year, float numDoors){
     this.regNr = regNr;
     this.brand = brand;
     this.model = model;
@@ -38,11 +38,11 @@ public Car(String regNr, String brand, String model, String year, float numDoors
         this.model = model;
     }
 
-    public String getYear() {
+    public int getYear() {
         return year;
     }
 
-    public void setYear(String year) {
+    public void setYear(int year) {
         this.year = year;
     }
 
